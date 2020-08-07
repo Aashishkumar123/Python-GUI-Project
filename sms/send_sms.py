@@ -15,7 +15,8 @@ def send_sms():
         messages = message.get("1.0","end-1c")
 
         url = "https://www.fast2sms.com/dev/bulk"
-        querystring = {"authorization":"SAoyOfCljesLHRJFbciIkYNQm67an5WXpxgt2qUDvKEhVwrTz0ICwMNgBmtoRVXWSPFdcfvO0Yla5i8e","sender_id":"FSTSMS","message":messages,"language":"english","route":"p","numbers":number}
+        api = "put your api here" #Go to fast2sms.com and signup to get the free Api
+        querystring = {"authorization":api,"sender_id":"FSTSMS","message":messages,"language":"english","route":"p","numbers":number}
 
         headers = {
                  'cache-control': "no-cache"
