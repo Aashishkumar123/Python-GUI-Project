@@ -3,10 +3,6 @@ import tkinter as tk
 import winsound
 from PIL import ImageTk, Image
 from playsound import playsound
-import multiprocessing
-import time
-import sounddevice as sd
-from scipy.io.wavfile import write
 
 class piano():
 
