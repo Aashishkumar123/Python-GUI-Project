@@ -10,7 +10,7 @@ from pytube import YouTube
 from pytube import Playlist
 from tkinter.ttk import Progressbar
 from tkinter.scrolledtext import ScrolledText
-#https://youtu.be/GvTcpfSnOMQ
+
 # ===========================================================
 
 class YoutubeDownloader():
@@ -260,4 +260,4 @@ class YoutubeDownloader():
 if __name__ == '__main__':
         YoutubeDownloader()
 
-====================================
+#====================================
