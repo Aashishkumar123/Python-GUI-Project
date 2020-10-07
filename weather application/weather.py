@@ -12,7 +12,7 @@ class Weather():
                 
                 self.url = "http://api.openweathermap.org/data/2.5/weather?q="
                 self.cityname =  self.loc.get(1.0,END)
-                self.api_key = '979d87e04f9d3a24d8806502c07a0ccf'
+                self.api_key = 'paste your api key here'
                 self.data = requests.get(self.url+self.cityname+'&appid='+self.api_key).json()
                 
 
