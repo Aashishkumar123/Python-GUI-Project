@@ -27,22 +27,8 @@ def search():
                 details.delete(1.0,END)
                 details.insert(1.0,f"\t username : {data['graphql']['user']['username']} \n     followers : {data['graphql']['user']['edge_followed_by']['count']}      following : {data['graphql']['user']['edge_follow']['count']} \n   full name : {data['graphql']['user']['full_name']} \n Total post : {data['graphql']['user']['edge_owner_to_timeline_media']['count']}  category : {data['graphql']['user']['category_enum']} \n        Email : {data['graphql']['user']['business_email']} \nbio-link:{data['graphql']['user']['external_url']}private account:{data['graphql']['user']['is_private']} || verified account:{data['graphql']['user']['is_verified']}  bussiness account:{data['graphql']['user']['is_business_account']}  \n \n   see profile picture" )
 
-
-
                 Button(innerframe1,text="click to see",relief=RAISED,borderwidth=2,font=('verdana',8,'bold'),bg='#248aa2',fg="white",command=pic).place(x=180,y=145)
-
-
-
-        
-
-
-        
-        
-
-
-
-
-
+                               
 frame = Frame(root,width=400,height=300,relief=RIDGE,borderwidth=5,bg='#248aa2')
 frame.place(x=0,y=0)
 
