@@ -128,16 +128,6 @@ def exit():
 # ======================= Edit Code Starts Here  ============================
 #=======================================================================================
 
-
-
-
-#=========================== Undo code =============================
-def undo():
-        pass
-# Its Challenge for you to give the undo functionality in the notepad
-
-#=========================== End code =====================================
-
 #=========================== Cut code =============================
 def cut():
         text.event_generate("<<Cut>>")
@@ -290,9 +280,13 @@ def send_feedback():
 # ============================= Main Window =============================
 
 root = tk.Tk()
-root.geometry('500x500')
+root.geometry('600x300')
+root.minsize(200,100)
 root.title('notepad')
 root.iconbitmap('notepad.ico')
+text = ScrolledText(root,height=1000,undo=True)
+text.pack(fill=tk.BOTH)
+
 menubar = Menu(root)
 
 file = Menu(menubar,tearoff = 0)
@@ -309,7 +303,8 @@ menubar.add_cascade(label="File",menu=file,font=('verdana',10,'bold'))
 
 edit = Menu(menubar,tearoff = 0)
 
-edit.add_command(label="Undo",accelerator="Ctrl+Z",command=undo)
+edit.add_command(label="Undo",accelerator="Ctrl+Z",command=text.edit_undo)
+edit.add_command(label="Redo",accelerator="Ctrl+Y",command=text.edit_redo)
 edit.add_separator()
 edit.add_command(label="Cut",accelerator="Ctrl+X",command=cut)
 edit.add_command(label="Copy",accelerator="Ctrl+C",command=copy)
@@ -337,18 +332,25 @@ Help.add_command(label="About Notepad")
 
 menubar.add_cascade(label="Help",menu=Help)
 
+m = Menu(root, tearoff = 0)
+m.add_command(label ="Select All",accelerator="Ctrl+A",command=select_all) 
+m.add_command(label ="Cut",accelerator="Ctrl+X",command=cut) 
+m.add_command(label ="Copy",accelerator="Ctrl+C",command=copy) 
+m.add_command(label ="Paste",accelerator="Ctrl+V",command=paste) 
+m.add_command(label ="Delete",accelerator="Del",command=delete) 
+m.add_separator() 
+m.add_command(label ="Undo",accelerator="Ctrl+Z",command=text.edit_undo)
+m.add_command(label ="Redo",accelerator="Ctrl+Z",command=text.edit_redo) 
+  
+def do_popup(event): 
+    try: 
+        m.tk_popup(event.x_root, event.y_root) 
+    finally: 
+        m.grab_release() 
+  
+root.bind("<Button-3>", do_popup) 
 
 root.config(menu=menubar)
-
-
-
-
-
-text = ScrolledText(root,width=1000,height=1000)
-text.place(x=0,y=0)
-
-
-
 root.mainloop()
 
 # ========================== End =======================================
