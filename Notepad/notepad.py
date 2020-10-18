@@ -332,6 +332,8 @@ Help.add_command(label="About Notepad")
 
 menubar.add_cascade(label="Help",menu=Help)
 
+# ======================== Right Click Menu =========================================
+
 m = Menu(root, tearoff = 0)
 m.add_command(label ="Select All",accelerator="Ctrl+A",command=select_all) 
 m.add_command(label ="Cut",accelerator="Ctrl+X",command=cut) 
@@ -349,6 +351,8 @@ def do_popup(event):
         m.grab_release() 
   
 root.bind("<Button-3>", do_popup) 
+
+# ==============================================================================
 
 root.config(menu=menubar)
 root.mainloop()
