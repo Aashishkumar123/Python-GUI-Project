@@ -1,8 +1,8 @@
 from tkinter import *
 import tkinter as tk
 from tkinter import ttk
-from PIL import ImageTk, Image
-from googletrans import Translator
+from PIL import ImageTk, Image      #pip install pillow
+from googletrans import Translator  #pip install googletrans==3.1.0a0
 from tkinter import messagebox
 
 root = tk.Tk()
@@ -19,6 +19,7 @@ def translate():
         if language_1 == '':
                 messagebox.showerror('Language Translator','please fill the box')
         else:
+                t2.delete(1.0,'end')
                 translator = Translator()
                 output = translator.translate(language_1, dest=cl)
                 t2.insert('end',output.text)
