@@ -20,7 +20,7 @@ class Weather():
                         messagebox.showerror('Error','City Not Found !!')
                 else:
                          self.location['text'] = self.data['name'] + "," + self.data['sys']['country']
-                         self.c = self.data['main']['temp_max'] - 273.15
+                         self.c = int(self.data['main']['temp_max'] - 273.15)
                          self.f = self.c*9/5+32
                          self.weather['text'] = self.data['weather'][0]['main']
                          self.weather['font'] = ('verdana',20,'bold')
