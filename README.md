@@ -1,3 +1,3 @@
- <h1>Python-Tkinter-Series</h1>
+ <h1>Python-Tkinter-Projects</h1>
 
-Python Tkinter GUI Projects 
+
