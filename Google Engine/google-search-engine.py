@@ -6,7 +6,7 @@ from PIL import ImageTk, Image
 import googlesearch
 # ================== .............. End..........============================
 
-# ================== .......... Window Components........ ============================
+# ================== .......... Window Components........ ===================
 
 #creating main window
 root = tk.Tk()

@@ -3,7 +3,8 @@ from tkinter import *
 import tkinter as tk
 
 #calling Tk() method
-root = tk.Tk()
+root = tk.Tk() 
+#its used for creating gui window 
 
 #title() method is used to change the title 
 root.title("My GUI")
