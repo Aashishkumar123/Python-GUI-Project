@@ -7,10 +7,10 @@ from PIL import ImageTk , Image
 rt = Tk()
 rt.title("Basic Calculator")
 #Change path of ico file here
-rt.iconbitmap('C:/imgs/icons/calc512px.ico') #CHANGE PATH
+rt.iconbitmap('C:/imgs/icons/calc512px.ico') #CHANGE PATH INSIDE ''
 rt.geometry("300x430")
 #change path of Background file here
-bg = ImageTk.PhotoImage(file="C:/imgs/300x430_bg.png") #CHANGE PATH
+bg = ImageTk.PhotoImage(file="C:/imgs/300x430_bg.png") #CHANGE PATH INSIDE " "
 bg_label = Label(rt, image=bg).place(x=0,y=0)
 
 # Entry Widget
@@ -19,6 +19,7 @@ e = Entry(rt,width=35,borderwidth=10,font=("Times",10))
 e.grid(row=0,column=0,pady=20,padx=30,columnspan=3)
 
 # CHANGE YOUR PATHS HERE..!!!!!
+# Example Img1 = ImageTk.PhotoImage(file="YOUR PATH HERE")
 
 Img1 = ImageTk.PhotoImage(file="C:/Users/irfan/OneDrive/Desktop/MO TECH/pngs50x50/1.png")
 Img2 = ImageTk.PhotoImage(file="C:/Users/irfan/OneDrive/Desktop/MO TECH/pngs50x50/2.png")
