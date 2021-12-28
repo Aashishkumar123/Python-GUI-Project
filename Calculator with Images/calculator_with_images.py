@@ -5,10 +5,12 @@ from tkinter import *
 from PIL import ImageTk , Image
 
 rt = Tk()
-rt.title("Moin's Calculator")
-rt.iconbitmap('C:/imgs/icons/calc512px.ico')
+rt.title("Basic Calculator")
+#Change path of ico file here
+rt.iconbitmap('C:/imgs/icons/calc512px.ico') #CHANGE PATH
 rt.geometry("300x430")
-bg = ImageTk.PhotoImage(file="C:/imgs/300x430_bg.png")
+#change path of Background file here
+bg = ImageTk.PhotoImage(file="C:/imgs/300x430_bg.png") #CHANGE PATH
 bg_label = Label(rt, image=bg).place(x=0,y=0)
 
 # Entry Widget
