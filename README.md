@@ -14,6 +14,7 @@
     <li> Google Translator Gui Application </li>
     <li> Cafe Management System Gui Application </li>
     <li> Calculator Gui Application </li>
+    <li> Calculator with Images Gui Application </li>
     <li> Calender Gui Application </li>
     <li> Currency Converter Gui Application </li>
     <li> SMS Sender Gui Application </li>
