@@ -120,9 +120,7 @@ header.place(x=0,y=0)
 h1 = Label(root,text="Email Sender",bg="orange",fg="black",font= ('verdana',13,'bold'))
 h1.place(x=135,y=5)
 
-gmailImagePath ='D:\coding\LEARNING FROM OTHER ACODES\Python-GUI-Project\Email Sender\gmail.png' #change the path to gmail.png
-
-img = ImageTk.PhotoImage(Image.open(gmailImagePath))
+img = ImageTk.PhotoImage(Image.open('gmail.png'))
 
 logo = Label(root,image=img,borderwidth=0)
 logo.place(x=150,y=38)
