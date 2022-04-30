@@ -21,6 +21,7 @@
     <li> Url Shortener Gui Application </li>
     <li> Weather Gui Application </li>
     <li> Basic Gui Youtube Downloader </li>
+    <li> Tic Tac Toe </li>
 </ol>
  -->
 
