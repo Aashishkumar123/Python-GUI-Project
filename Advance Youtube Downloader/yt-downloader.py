@@ -1,3 +1,11 @@
+# =================== PASSED ===========================
+# Fix Resolution Software Youtube Video Downloader
+# Add someone variabel in video downloader 
+# And pop up show messagebox download started
+# ======================================================
+
+
+
 # ================= Importing Modules ===================
 from tkinter import *
 import tkinter as tk
@@ -45,15 +53,17 @@ class YoutubeDownloader():
                 elif self.video_path.get() == "":
                         messagebox.showerror("Error","Please provide Path")
                 else:
-                        try:
-
+                        # try:
+                                # Just fix resolution video and add variabel in video downloader 
+                                # And create messagebox show info download started.
                                 self.url = self.video_url.get()
                                 self.path = self.video_path.get()
-                                self.video = YouTube(self.url)
-                                self.stream = self.video.streams.filter(only_audio=False).first()
-                                print("download started",self.video.title)
-                                
-                                print("download completed",self.video.title)
+                                self.video = YouTube(self.url).streams
+                                self.stream = self.video.filter(
+                                file_extension="mp4", res="720p", 
+                                only_audio=False  
+                                ).first()
+                                messagebox.showinfo("Information Download Video", "Download Started Just Wait Pop Up Show For Done Download Video.")
 
                                 self.root = tk.Tk()
                                 self.root.geometry('300x150')
@@ -83,7 +93,7 @@ class YoutubeDownloader():
 
                                 self.dow_details = ScrolledText(self.root,width=30,height=3,font=('verdana',8,'bold'))
                                 self.dow_details.place(x=20,y=70)
-                                self.dow_details.insert(END,f'{self.video_path.get()}\n {self.video.title}')
+                                self.dow_details.insert(END,f'{self.video_path.get()}')
 
                                 self.dow_success = Label(self.root,text="Video downloaded successfully .....",fg="red",font=('verdana',10,'bold'),bg="white")
                                 self.dow_success.place(x=10,y=120)
@@ -91,9 +101,9 @@ class YoutubeDownloader():
                                 self.root.mainloop()
 
                                 
-                        except:
-                                time.sleep(10)
-                                messagebox.showerror("Error","Unable to Download Video | Something went wrong !!")
+                        # except:
+                                # time.sleep(10)
+                                # messagebox.showerror("Error","Unable to Download Video | Something went wrong !!")
 
                 # ========================= End ==============================
 
