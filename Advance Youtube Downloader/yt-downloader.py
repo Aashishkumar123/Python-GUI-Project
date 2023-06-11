@@ -18,9 +18,9 @@ from pytube import YouTube
 from pytube import Playlist
 from tkinter.ttk import Progressbar
 from tkinter.scrolledtext import ScrolledText
-
+import os
 # ===========================================================
-
+youtubeLogo = os.path.join(os.getcwd(), "Advance Youtube Downloader\youtube.png")
 class YoutubeDownloader():
 
         # ========== Video Path ===================
@@ -203,7 +203,7 @@ class YoutubeDownloader():
                 self.design3 = Label(self.root,bg="red",width=3,height=6)
                 self.design3.place(x=242,y=90)
 
-                self.yt_icon = ImageTk.PhotoImage(Image.open('youtube.png'))
+                self.yt_icon = ImageTk.PhotoImage(Image.open(youtubeLogo, mode="r"))
                 self.logo = Label(self.root,image=self.yt_icon,bg="white")
                 self.logo.place(x=220,y=70)
 
