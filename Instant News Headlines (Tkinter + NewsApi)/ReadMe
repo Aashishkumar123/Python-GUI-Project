@@ -1,0 +1,7 @@
+This is Simple News Headline Application made in Python with NewsAPi and Gui using TKinter 
+
+Here are the TWo options :
+1. Get headlines of your choice= in which we give different parameters given by user and get news from around the world.
+2. This end give and generate random headlines.
+
+
