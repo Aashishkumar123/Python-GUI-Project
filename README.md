@@ -32,6 +32,8 @@ Running the script is really simple! Just open a terminal in the folder where yo
 `18. Weather Gui Application` <br/>
 `19. Basic Gui Youtube Downloader` <br/>
 `20. Tic Tac Toe` <br/>
+`21. News Headlines Application`
+
 
 
 
