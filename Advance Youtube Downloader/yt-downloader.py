@@ -20,7 +20,7 @@ from tkinter.ttk import Progressbar
 from tkinter.scrolledtext import ScrolledText
 import os
 # ===========================================================
-youtubeLogo = os.path.join(os.getcwd(), "Advance Youtube Downloader\youtube.png")
+youtubeLogo = os.path.join(os.getcwd(), "./youtube.png")
 class YoutubeDownloader():
 
         # ========== Video Path ===================
