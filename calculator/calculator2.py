@@ -1,7 +1,5 @@
 # Inspirado no programa 'clac1.py' do livro "Python and Tkinter Programming" de John E.Grayson
 from tkinter import *
-if 'constants' not in __import__('tkinter').__all__:
-    from tkinter import constants
 
 def frame(root, side):
     w = Frame(master=root)
