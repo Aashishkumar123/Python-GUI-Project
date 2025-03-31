@@ -1,5 +1,7 @@
 # Inspirado no programa 'clac1.py' do livro "Python and Tkinter Programming" de John E.Grayson
 from tkinter import *
+if 'constants' not in __import__('tkinter').__all__:
+    from tkinter import constants
 
 def frame(root, side):
     w = Frame(master=root)
@@ -17,7 +19,7 @@ display = StringVar()
 frame_top = Frame(root,)
 frame_top.pack(side=TOP, fill=BOTH, expand=YES)
 Entry(master=frame_top, relief=SUNKEN,
-      textvariable=display).pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=2)
+      textvariable=display, state=constants.DISABLED).pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=2)
 Button(frame_top, text="C",
        command=lambda w=display: w.set(''),
        bg="red", fg="white", relief=RIDGE).pack(side=RIGHT, expand=False, padx=2)
