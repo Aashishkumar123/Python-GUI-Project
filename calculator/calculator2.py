@@ -17,7 +17,7 @@ display = StringVar()
 frame_top = Frame(root,)
 frame_top.pack(side=TOP, fill=BOTH, expand=YES)
 Entry(master=frame_top, relief=SUNKEN,
-      textvariable=display).pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=2)
+      textvariable=display, state=DISABLED).pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=2)
 Button(frame_top, text="C",
        command=lambda w=display: w.set(''),
        bg="red", fg="white", relief=RIDGE).pack(side=RIGHT, expand=False, padx=2)
